@@ -7,12 +7,28 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
+<script src="script.js"></script>
+
 <body>
   <header class="hero">
     <h1>Edin Maintenance Ltd</h1>
     <p>10+ Years of Trusted Landscaping & Driveway Services in Scotland</p>
     <a href="#contact" class="cta">Request a Free Estimate</a>
   </header>
+
+  <section class="hero-slider">
+  <div class="slides">
+<img src="images/new1.jpg" class="slide active" alt="New Service 1">
+<img src="images/new2.jpg" class="slide" alt="New Service 2">
+<img src="images/new3.jpg" class="slide" alt="New Service 3">
+  </div>
+  <div class="hero-overlay">
+    <h1>Edin Maintenance Ltd</h1>
+    <p>10+ Years of Trusted Landscaping & Driveway Services in Scotland</p>
+    <a href="#contact" class="cta-btn">Request a Free Estimate</a>
+  </div>
+</section>
 
   <section class="about">
     <h2>About Us</h2>
@@ -43,12 +59,11 @@
     </blockquote>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Contact Us</h2>
-    <p>📍 Stirling, Scotland</p>
-    <p>📞 Call: <a href="tel:+441234567890">+44 1234 567890</a></p>
-    <p>📧 Email: <a href="mailto:edinmaintenance@email.com">edinmaintenance@email.com</a></p>
-  </section>
+<section class="slideshow">
+  <img src="images/photo1.jpg" class="slide active" alt="Maintenance Work 1">
+  <img src="images/photo2.jpg" class="slide" alt="Maintenance Work 2">
+  <img src="images/photo3.jpg" class="slide" alt="Maintenance Work 3">
+</section>
 
 <section id="contact">
   <h2>Contact Us</h2>
@@ -66,19 +81,30 @@
   </form>
 </section>
 
-<section id="map">
-  <h2>Our Location</h2>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8949.512622819617!2d-3.9356019226722913!3d56.11714914609556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48886f5ce9f86d07%3A0x35f1abf74e660af8!2sStirling%2C%20UK!5e0!3m2!1sen!2suk!4v1720092541243!5m2!1sen!2suk"
-    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</section>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📍 Stirling, Scotland</p>
+    <p>📞 Call: <a href="tel:+441234567890">+44 1234 567890</a></p>
+    <p>📧 Email: <a href="mailto:edinmaintenance@email.com">edinmaintenance@email.com</a></p>
+  </section>
 
+<script>
+  // Get all slide elements
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
 
-  <footer>
-    <p>© 2025 Edin Maintenance Ltd. All rights reserved.</p>
-  </footer>
+  // Function to switch slides
+  function showNextSlide() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }
+
+  // Change slide every 4 seconds
+  setInterval(showNextSlide, 4000);
+</script>
+</body>
+</html>
 
 <a href="https://wa.me/441234567890"
    class="whatsapp-float"
@@ -100,5 +126,15 @@
    <i class="fab fa-whatsapp"></i> Chat
 </a>
 
-</body>
-</html>
+<section id="map">
+  <h2>Our Location</h2>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8949.512622819617!2d-3.9356019226722913!3d56.11714914609556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48886f5ce9f86d07%3A0x35f1abf74e660af8!2sStirling%2C%20UK!5e0!3m2!1sen!2suk!4v1720092541243!5m2!1sen!2suk"
+    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+  <footer>
+    <p>© 2025 Edin Maintenance Ltd. All rights reserved.</p>
+  </footer>
