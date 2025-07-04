@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.hero {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.cta {
+  background: #fff;
+  color: #003366;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+.reviews blockquote {
+  font-style: italic;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #004aad;
+}
+
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .cta {
+    padding: 8px 16px;
+  }
+}
